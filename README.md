@@ -60,11 +60,19 @@ Load it, press Run: AC ends as hex `00C` (12) and is shown in the output registe
 
 ## How to run
 
-1. Open `WindowsFormsApp1.sln` in Visual Studio (the project targets .NET Framework 4.6.1, per `App.config`).
-2. Build and run (F5).
-3. Type the program in the commands box, press the load button, then run it.
+Visual Studio:
 
-Note: the solution references `WindowsFormsApp1/WindowsFormsApp1.csproj`, which is not present in this repository, so the project file has to be recreated or restored before it builds.
+1. Open `WindowsFormsApp1.sln` (the project targets .NET Framework 4.6.1).
+2. Build and run (F5).
+
+Command line (the `Microsoft.NETFramework.ReferenceAssemblies` package supplies the reference assemblies, so no targeting pack is needed):
+
+```
+dotnet build WindowsFormsApp1.sln
+WindowsFormsApp1\bin\Debug\net461\WindowsFormsApp1.exe
+```
+
+Then type a program in the commands box, press the load button, and run it.
 
 ## Repository layout
 
