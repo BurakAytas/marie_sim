@@ -55,23 +55,23 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Commands.Add(new Command { CommnandHex = "0", CommnandInt = 0, CommandName = "Jns" });
-            Commands.Add(new Command { CommnandHex = "1", CommnandInt = 1, CommandName = "Load" });
-            Commands.Add(new Command { CommnandHex = "2", CommnandInt = 2, CommandName = "Store" });
-            Commands.Add(new Command { CommnandHex = "3", CommnandInt = 3, CommandName = "Add" });
-            Commands.Add(new Command { CommnandHex = "4", CommnandInt = 4, CommandName = "Subt" });
-            Commands.Add(new Command { CommnandHex = "5", CommnandInt = 5, CommandName = "Input" });
-            Commands.Add(new Command { CommnandHex = "6", CommnandInt = 6, CommandName = "Output" });
-            Commands.Add(new Command { CommnandHex = "7", CommnandInt = 7, CommandName = "Halt" });
-            Commands.Add(new Command { CommnandHex = "8", CommnandInt = 8, CommandName = "Skipcond" });
-            Commands.Add(new Command { CommnandHex = "9", CommnandInt = 9, CommandName = "Jump" });
-            Commands.Add(new Command { CommnandHex = "A", CommnandInt = 10, CommandName = "Clear" });
-            Commands.Add(new Command { CommnandHex = "B", CommnandInt = 11, CommandName = "AddI" });
-            Commands.Add(new Command { CommnandHex = "C", CommnandInt = 12, CommandName = "JumpI" });
-            Commands.Add(new Command { CommnandHex = "D", CommnandInt = 13, CommandName = "LoadI" });
-            Commands.Add(new Command { CommnandHex = "E", CommnandInt = 14, CommandName = "StoreI" });
-            Commands.Add(new Command { CommnandHex = "G", CommnandInt = 16, CommandName = "ORG" });
-            Commands.Add(new Command { CommnandHex = "H", CommnandInt = 17, CommandName = "END" });
+            Commands.Add(new Command { CommandHex = "0", CommandInt = 0, CommandName = "Jns" });
+            Commands.Add(new Command { CommandHex = "1", CommandInt = 1, CommandName = "Load" });
+            Commands.Add(new Command { CommandHex = "2", CommandInt = 2, CommandName = "Store" });
+            Commands.Add(new Command { CommandHex = "3", CommandInt = 3, CommandName = "Add" });
+            Commands.Add(new Command { CommandHex = "4", CommandInt = 4, CommandName = "Subt" });
+            Commands.Add(new Command { CommandHex = "5", CommandInt = 5, CommandName = "Input" });
+            Commands.Add(new Command { CommandHex = "6", CommandInt = 6, CommandName = "Output" });
+            Commands.Add(new Command { CommandHex = "7", CommandInt = 7, CommandName = "Halt" });
+            Commands.Add(new Command { CommandHex = "8", CommandInt = 8, CommandName = "Skipcond" });
+            Commands.Add(new Command { CommandHex = "9", CommandInt = 9, CommandName = "Jump" });
+            Commands.Add(new Command { CommandHex = "A", CommandInt = 10, CommandName = "Clear" });
+            Commands.Add(new Command { CommandHex = "B", CommandInt = 11, CommandName = "AddI" });
+            Commands.Add(new Command { CommandHex = "C", CommandInt = 12, CommandName = "JumpI" });
+            Commands.Add(new Command { CommandHex = "D", CommandInt = 13, CommandName = "LoadI" });
+            Commands.Add(new Command { CommandHex = "E", CommandInt = 14, CommandName = "StoreI" });
+            Commands.Add(new Command { CommandHex = "G", CommandInt = 16, CommandName = "ORG" });
+            Commands.Add(new Command { CommandHex = "H", CommandInt = 17, CommandName = "END" });
         }
 
         private string intToHex16(int sayi)
@@ -171,7 +171,7 @@ namespace WindowsFormsApp1
                 {
                     Memories[start + i].isCommand = true;
 
-                    string memoryVal = Commands.First(c => c.CommandName == commandLine[0]).CommnandHex;
+                    string memoryVal = Commands.First(c => c.CommandName == commandLine[0]).CommandHex;
 
                     if (commandLine.Count() > 1)//Halt komutu parametre almadığı için
                     {

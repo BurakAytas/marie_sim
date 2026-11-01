@@ -10,8 +10,8 @@ namespace WindowsFormsApp1.Model
     {
         public string CommandName { get; set; }
 
-        public string CommnandHex { get; set; }
+        public string CommandHex { get; set; }
 
-        public int CommnandInt { get; set; }
+        public int CommandInt { get; set; }
     }
 }
